@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Login Here</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+        <style>
+            body {
+              
+              background-color: rgb(151, 200, 240);
+            }
+            </style>
+    </head>
+    <body class="container">
+        <div class="page-header">
+            <h1><center>Online Quiz</center></h1>
+        </div>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="admin_home.html">Home</a></li>
+                        <li><a href="/add_teacher">Add Teacher</a></li>
+                        <li><a href="/add_student">Add Student</a></li>
+                       
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                       
+                        <li><a href="/logout">Log Out</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container row">
+           <h1>Add Student Details</h1>
+           <form action="/add_student" method="POST">
+            <table>
+                <tr><td>USN</td><td><input type="text" name="usn" id="usn"/></td></tr>
+                <tr><td>Name</td><td><input type="text" name="name" id="name"/></td></tr>
+                
+                <tr><td>Email</td><td><input type="text" name="email" id="email"/></td></tr>
+                <tr><td>Mobile</td><td><input type="text" name="mob" id="mob"/></td></tr>
+                <tr><td>Password</td><td><input type="password" name="pass" id="pass"/></td></tr>
+                <tr>
+                            <td>
+                                Course
+                            <td> <select id="course" name="course" style="width: 205px" onclick="return c_setBranch();">
+                                    <option value="Select">Select</option>
+                                    <option value="B.E/B.Tech">B.E/B.Tech</option>
+                                    <option value="M.E/M.Tech">M.E/M.Tech</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="BCA">BCA</option>
+                                    <option value="Diploma">Diploma</option>
+                                </select>
+                            </td>
+                            </td>
+                        </tr>
+       
+        <tr>
+            <td>
+                Branch:
+            </td>
+            <td>
+                <select id="branch" name="branch" style="width: 205px">
+                        <option value="Select">Select</option>
+                        <option value="IS">Information Science</option>
+                        <option value="CS">Computer Science</option>
+                        <option value="EC">Electronics and Communication</option>
+                        <option value="EEE">Electrical and Electronics Engineering</option>
+                        <option value="ME">Mechanical Engineering</option>
+                        <option value="Civil">Civil Engineering</option>
+                        
+                    </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Semester:
+            </td>
+            <td>
+                <select id="sem" name="sem" style="width: 205px">
+                        <option value="Select">Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        
+                    </select>
+            </td>
+        </tr>
+        
+               
+                
+                <tr><td></td><td><input type="submit" name="submit" value="Add Student"/></td></tr>
+            </table>
+            </form>
+
+        </div>
+    </body>
+</html>
